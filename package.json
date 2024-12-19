@@ -1,0 +1,22 @@
+{
+    "name": "rolldown-starter",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "build": "npm run build:rolldown && npm run build:esbuild",
+        "build:rolldown": "rolldown -c ./rolldown.config.mjs",
+        "build:esbuild": "esbuild ./src/index.jsx --bundle --outdir=./esbuild-dist --format=esm --splitting"
+    },
+    "stackblitz": {
+        "installDependencies": false,
+        "startCommand": "npm install --cpu=wasm32 && npm run build"
+    },
+    "dependencies": {
+        "@iconify-icons/material-symbols": "^1.2.58",
+		"@iconify/react": "^5.0.1",
+        "react": "^18.3.1",
+		"react-dom": "^18.3.1",
+        "esbuild": "^0.24.0",
+        "rolldown": "0.15.1-commit.cc6f557"
+    }
+}
