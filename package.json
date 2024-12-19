@@ -3,8 +3,9 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "build": "npm run build:rolldown && npm run build:esbuild",
+        "build": "npm run build:rolldown && npm run build:rollup && npm run build:esbuild",
         "build:rolldown": "rolldown -c ./rolldown.config.mjs",
+        "build:rollup": "rollup -c ./rollup.config.mjs",
         "build:esbuild": "esbuild ./src/index.jsx --bundle --outdir=./esbuild-dist --format=esm --splitting"
     },
     "stackblitz": {
@@ -13,10 +14,13 @@
     },
     "dependencies": {
         "@iconify-icons/material-symbols": "^1.2.58",
-		"@iconify/react": "^5.0.1",
-        "react": "^18.3.1",
-		"react-dom": "^18.3.1",
+        "@iconify/react": "^5.0.1",
+        "@rollup/plugin-commonjs": "^28.0.2",
+        "@rollup/plugin-node-resolve": "^16.0.0",
         "esbuild": "^0.24.0",
-        "rolldown": "0.15.1-commit.cc6f557"
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "rolldown": "0.15.1-commit.cc6f557",
+        "rollup": "^4.28.1"
     }
 }
