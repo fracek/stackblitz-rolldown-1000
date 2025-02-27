@@ -11,7 +11,7 @@
     },
     "stackblitz": {
         "installDependencies": false,
-        "startCommand": "npm install --cpu=wasm32 && npm run build"
+        "startCommand": "pnpm install --cpu=wasm32"
     },
     "dependencies": {
         "@iconify-icons/material-symbols": "^1.2.58",
