@@ -5,6 +5,7 @@
     "scripts": {
         "build": "npm run build:rolldown && npm run build:vite && npm run build:esbuild",
         "build:rolldown": "rolldown -c ./rolldown.config.mjs",
+        "build:rollup": "rollup -c ./rolldown.config.mjs",
         "build:vite": "vite build",
         "build:esbuild": "esbuild ./src/index.jsx --bundle --outdir=./esbuild-dist --format=esm --splitting"
     },
@@ -18,7 +19,7 @@
         "esbuild": "^0.24.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
-        "rolldown": "0.15.1-commit.cc6f557",
+        "rolldown": "1.0.0-beta.3",
         "vite": "^6.0.3"
     }
 }
